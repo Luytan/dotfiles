@@ -51,10 +51,6 @@
                     mountpoint = "/nix";
                     mountOptions = ["subvol=nix" "compress=zstd:3" "ssd" "space_cache=v2" "discard=async" "noatime"];
                   };
-                  "/persist" = {
-                    mountpoint = "/persist";
-                    mountOptions = ["subvol=persist" "compress=zstd:3" "ssd" "space_cache=v2" "discard=async" "noatime"];
-                  };
                   "/log" = {
                     mountpoint = "/var/log";
                     mountOptions = ["subvol=log" "compress=zstd:3" "ssd" "space_cache=v2" "discard=async" "noatime"];
