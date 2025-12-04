@@ -7,6 +7,8 @@
       ./disko-config.nix
       ../../modules/common/fonts.nix
       ../../modules/services/asusctl.nix
+      ../../modules/services/tuned.nix
+      ../../modules/common/cpu-boost.nix
     ];
 
   # Bootloader & Kernel

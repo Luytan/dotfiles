@@ -6,16 +6,16 @@
   home.stateVersion = "25.11";
   ## FISH
   programs.fish = {
-     enable = true;
-     interactiveShellInit = ''
-       set fish_greeting
-       zoxide init fish | source
-     '';
-     shellAliases = {
-       rebuild = "sudo nixos-rebuild switch --flake ~/Documents/NixOS/dotfiles#glaceon";
-       upd = "nix flake update --flake ~/Documents/NixOS/dotfiles";
-       clean = "nix-collect-garbage -d";
-     };
+    enable = true;
+    interactiveShellInit = ''
+      set fish_greeting
+      zoxide init fish | source
+    '';
+    shellAliases = {
+      rebuild = "sudo nixos-rebuild switch --flake ~/Documents/NixOS/dotfiles#glaceon";
+      upd = "nix flake update --flake ~/Documents/NixOS/dotfiles";
+      clean = "nix-collect-garbage -d";
+    };
   };
   programs.zoxide = {
     enable = true;
@@ -60,13 +60,15 @@
     eza
     mission-center
     bat
+    nvtopPackages.amd
     tldr
     yazi
     fzf
     ripgrep
-    ghostty 
+    ghostty
     filen-desktop
     neovim
+    nixfmt
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -83,13 +85,14 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
   };
- xdg = {
-   enable = true;
- };
- home.sessionVariables = {
-   EDITOR="vim";
-   TERMINAL = "konsole";
- };
+  xdg = {
+    enable = true;
+  };
+  home.sessionVariables = {
+    EDITOR = "vim";
+    TERMINAL = "konsole";
+    NIXOS_OZONE_WL = "1";
+  };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
