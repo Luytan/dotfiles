@@ -11,6 +11,8 @@
     ./modules/cli/zoxide.nix
     ./modules/editors/zed.nix
     ./modules/cli/ghostty.nix
+    ./modules/editors/vscode.nix
+
   ];
   #programs.ssh = {
   #  enable = true;
@@ -23,7 +25,6 @@
   home.packages = with pkgs; [
     #Packages
     fastfetch
-    vscode
     gcc
     gdb
     rsync
