@@ -8,7 +8,7 @@
       ../../modules/common/fonts.nix
       ../../modules/services/asusctl.nix
       ../../modules/services/tuned.nix
-      ../../modules/common/cpu-boost.nix
+      ../../modules/services/cpu-boost.nix
       ../../modules/common/bluetooth.nix
     ];
 
