@@ -30,6 +30,7 @@
     rsync
     wl-clipboard
     btop
+    discord-canary
     htop
     eza
     mission-center
