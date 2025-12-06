@@ -10,6 +10,7 @@
     ./modules/cli/gpg.nix
     ./modules/cli/zoxide.nix
     ./modules/editors/zed.nix
+    ./modules/cli/ghostty.nix
   ];
   #programs.ssh = {
   #  enable = true;
@@ -37,7 +38,6 @@
     yazi
     fzf
     ripgrep
-    ghostty
     filen-desktop
     neovim
     nixfmt
