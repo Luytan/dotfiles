@@ -30,7 +30,6 @@
         
         disko.nixosModules.disko
         lanzaboote.nixosModules.lanzaboote
-        
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;

@@ -17,15 +17,28 @@
       clean = "nix-collect-garbage -d";
     };
   };
+  programs.zed-editor = {
+  enable = true;
+  extensions = [ "nix" "toml" "rust" ];
+  userSettings = {
+    theme = {
+      mode = "system";
+      dark = "One Dark";
+      light = "One Light";
+    };
+    hour_format = "hour24";
+    vim_mode = true;
+  };
+};
   programs.zoxide = {
     enable = true;
     enableFishIntegration = true;
   };
   programs.gpg.enable = true;
-  services.gpg-agent = {
-    enable = true;
-    pinentry.package = pkgs.pinentry-qt;
-  };
+  #services.gpg-agent = {
+  #  enable = true;
+  #  pinentry.package = pkgs.pinentry-qt;
+  #};
   programs.git = {
     enable = true;
     settings = {
@@ -39,13 +52,13 @@
       signByDefault = true;
     };
   };
-  programs.ssh = {
-    enable = true;
-    extraConfig = ''
-      Host *
-        AddKeysToAgent yes
-    '';
-  };
+  #programs.ssh = {
+  #  enable = true;
+  #  extraConfig = ''
+  #    Host *
+  #      AddKeysToAgent yes
+  #  '';
+  #};
 
   home.packages = with pkgs; [
     #Packages

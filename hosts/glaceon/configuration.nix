@@ -15,7 +15,10 @@
   # Bootloader & Kernel
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.systemd.enable = true;
-  
+
+
+  # AMD Microcode
+  hardware.cpu.amd.updateMicrocode = true;
   # Plymouth
   boot.plymouth = {
       enable = true;
