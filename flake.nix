@@ -34,7 +34,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.luytan = import ./users/luytan/home.nix;
+          home-manager.users.luytan = import ./home.nix;
         }
 
         ({ pkgs, lib, ... }: {
