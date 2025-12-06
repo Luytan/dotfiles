@@ -6,6 +6,9 @@
   home.stateVersion = "25.11";
   imports = [
     ./modules/cli/fish.nix
+    ./modules/cli/git.nix
+    ./modules/cli/gpg.nix
+    ./modules/cli/zoxide.nix
   ];
   programs.zed-editor = {
   enable = true;
@@ -20,28 +23,6 @@
     vim_mode = true;
   };
 };
-  programs.zoxide = {
-    enable = true;
-    enableFishIntegration = true;
-  };
-  programs.gpg.enable = true;
-  #services.gpg-agent = {
-  #  enable = true;
-  #  pinentry.package = pkgs.pinentry-qt;
-  #};
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        name = "Luytan";
-        email = "luytan@khora.me";
-      };
-    };
-    signing = {
-      key = "9DF7DF3488EC912A";
-      signByDefault = true;
-    };
-  };
   #programs.ssh = {
   #  enable = true;
   #  extraConfig = ''
