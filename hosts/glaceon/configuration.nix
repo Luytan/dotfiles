@@ -65,12 +65,13 @@
     enable = true;
     enable32Bit = true;
   };
-
+  hardware.amdgpu.initrd.enable = true;
   # Nix Settings
   nix.gc = {
     automatic = true;
     dates = "weekly";
   };
+  nix.settings.auto-optimise-store = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
@@ -97,6 +98,8 @@
   services.pipewire = {
     enable = true;
     pulse.enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
   };
   services.libinput.enable = true;
 
