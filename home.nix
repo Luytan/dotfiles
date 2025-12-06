@@ -12,7 +12,7 @@
     ./modules/editors/zed.nix
     ./modules/cli/ghostty.nix
     ./modules/editors/vscode.nix
-
+    ./modules/cli/eza.nix
   ];
   #programs.ssh = {
   #  enable = true;
