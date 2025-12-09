@@ -13,6 +13,7 @@
     ./modules/cli/ghostty.nix
     ./modules/editors/vscode.nix
     ./modules/cli/eza.nix
+    ./modules/cli/zellij.nix
   ];
   #programs.ssh = {
   #  enable = true;
@@ -25,7 +26,6 @@
   home.packages = with pkgs; [
     #Packages
     fastfetch
-    zellij
     ghidra-bin
     gcc
     gdb
