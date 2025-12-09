@@ -14,7 +14,6 @@
     ./modules/editors/vscode.nix
     ./modules/cli/eza.nix
     ./modules/cli/zellij.nix
-      ./modules/editors/cursor.nix
   ];
   #programs.ssh = {
   #  enable = true;
@@ -26,6 +25,7 @@
 
   home.packages = with pkgs; [
     #Packages
+    code-cursor
     jdk
     fastfetch
     ghidra-bin
