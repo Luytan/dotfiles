@@ -10,6 +10,7 @@
       ../../modules/services/tuned.nix
       ../../modules/services/cpu-boost.nix
       ../../modules/common/bluetooth.nix
+      ../../modules/containers/podman.nix
     ];
 
   # Bootloader & Kernel
@@ -66,6 +67,7 @@
     enable32Bit = true;
   };
   hardware.amdgpu.initrd.enable = true;
+  services.tailscale.enable = true;
   # Nix Settings
   nix.gc = {
     automatic = true;

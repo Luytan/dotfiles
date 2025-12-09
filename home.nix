@@ -25,6 +25,8 @@
   home.packages = with pkgs; [
     #Packages
     fastfetch
+    zellij
+    ghidra-bin
     gcc
     gdb
     rsync
