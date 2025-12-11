@@ -26,6 +26,9 @@
   home.packages = with pkgs; [
     #Packages
     code-cursor
+    steam
+    mangohud
+    gamescope
     jdk
     fastfetch
     ghidra-bin
