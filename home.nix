@@ -34,6 +34,7 @@
     rsync
     wl-clipboard
     btop
+    obsidian
     discord-canary
     htop
     eza

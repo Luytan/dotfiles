@@ -16,9 +16,8 @@
   # Bootloader & Kernel
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.systemd.enable = true;
-
-
-  # AMD Microcode
+  services.system76-scheduler.enable = true;
+    # AMD Microcode
   hardware.cpu.amd.updateMicrocode = true;
   # Plymouth
   boot.plymouth = {
@@ -26,6 +25,7 @@
       theme = "bgrt";
   };
   boot.consoleLogLevel = 3;
+  hardware.enableAllFirmware = true;
   boot.initrd.verbose = false;
   boot.kernelParams = [
       "video=2560x1600@120"
@@ -78,11 +78,16 @@
   nixpkgs.config.allowUnfree = true;
 
   # Desktop Environment
+  ## KDE Plasma
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
+  ## Cosmic Desktop
+  #services.desktopManager.cosmic.enable = true;
+  #services.gnome.gnome-keyring.enable = true;
   xdg.portal = {
     enable = true;
+    wlr.enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
@@ -118,8 +123,10 @@
   programs.nix-ld.enable = true;
   environment.systemPackages = with pkgs; [
     vim
+    virt-what
     wget
     tpm2-tss
+    linux-firmware
   ];
   programs.mtr.enable = true;
   programs.gnupg.agent = {
